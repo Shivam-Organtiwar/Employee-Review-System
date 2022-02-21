@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Employee Review System Sign In</title>
+
+    <style>
+      body {text-align: center; background-color: powderblue; font-size: 30px; font-family: cursive;}
+      h1   {color: blue;}
+      input {font-size: 20px; font-family: sans-serif;}
+      button {font-size: 20px; padding: 5px 10px; background-color: lightseagreen;}
+    </style>
+  
+  </head>
+  
+  <body>
+        <h1>Admin / Employee Sign In</h1>
+        <br><br><br>
+      <form class="w-50 mx-auto" action="/employee/create-session" method="POST">
+        <div class="mb-3">
+          <label for="email" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" required/>
+        </div>
+
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="Enter Your Password" required/>
+        </div>
+          <button type="submit" class="btn btn-primary">Log In</button>
+      </form>
+      <br><br><br><br>
+        <a href="/employee/signup">I First Need To Sign Up!</a>
+
+  </body>
+
+</html>

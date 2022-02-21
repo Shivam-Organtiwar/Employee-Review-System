@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <title>Home</title>
+    
+    <style>
+      body {background-color: lightcyan; font-size: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+      h1 {font-family: Georgia, 'Times New Roman', Times, serif; text-align: center; color: darksalmon;}
+      h2 {font-family: Georgia, 'Times New Roman', Times, serif; text-align: center; color: darksalmon;}
+    </style>
+  
+  </head>
+  
+  <body>
+    <%- include('_header')%>
+
+    <h1>Assign Review</h1>
+
+        <div>
+            <% for(let emp of toReview){%>
+              <div class="card" style="border: 0;">
+                 <div class="card-body">
+                     <h5 class="card-title">Write a review for: <%=emp.name%></h5>
+                     <form action="/review/create-review/<%=emp._id %>" method="post">
+                         <div class="form-group">
+                             <textarea class="form-control" rows="3" name="review" placeholder="Give your review"></textarea>
+                         </div>
+                     <div style="display: flex; justify-content: flex-end;margin-top: 7px;">
+                         <button type="submit" class="btn btn-primary">Submit Feedback</button>
+                     </div>
+                     </form>
+                 </div>
+             </div>
+             <%}%>
+
+        </div>
+      </div>
+
+      <div class="border border-dark" style="width: 45%">
+        <div class="bg-dark text-white border-dark" style="padding: 5px">
+          <div class="mx-auto" style="width: 200px">
+            <h2>My Reviews</h2>
+          </div>
+        </div>
+        <div>
+            <% for(let i=0;i< myReviews.length;i++){%>
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">From : <%=myReviews[i].name%></h5>
+                      <p class="card-text">Review: <%=myReviews[i].review%></p>
+                  </div>
+              </div>
+              <% } %>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<header class="navbar navbar-dark bg-dark">
+  <nav class="container-fluid" style="color: white">
+
+    <a href="/" class="navbar-brand"></a>
+    <%if (locals.user) {%>
+    <a href="/" class="navbar-brand">Welcome <%=locals.user.name%> !</a>
+    <%}%>
+    <div class="d-flex">
+      <a class="navbar-brand" href="/admin/assign-review">Assign Reviews</a>
+      <a class="navbar-brand" href="/admin/admin-view">View Employees</a>
+      <a class="navbar-brand" href="/admin/signout">Sign out</a>
+    </div>
+
+  </nav>
+</header>
