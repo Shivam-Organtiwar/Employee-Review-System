@@ -10,16 +10,6 @@ const db = require('./config/mogoose');                            //importing t
 
 
 
-app.listen(port, function (error) {                                //checking for error if any
-  if (error) {
-    console.log('Error In Running The Server');
-    return;
-  }
-  console.log('Cool! Server Is Running On Port:', port);
-});
-
-
-
 app.set('view engine', 'ejs');                                     //setting up the view engine EJS
 app.set('views', './views');                                       //linking views folder with server
 // app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
@@ -31,3 +21,13 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.setAuthenticatedUser);
 app.use('/', require('./routes'));
+
+
+
+app.listen(port, function (error) {                                //checking for error if any
+  if (error) {
+    console.log('Error In Running The Server');
+    return;
+  }
+  console.log('Cool! Server Is Running On Port:', port);
+});
