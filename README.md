@@ -9,8 +9,6 @@
 
 ## Folder Structure
 
-habit-tracker <br>
-
 ├── config <br>
 │ --- └── mongoose.js <br>
 │ --- └── passport.js <br>
