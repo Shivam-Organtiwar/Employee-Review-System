@@ -23,7 +23,7 @@ habit-tracker <br>
 
 
 ├── models <br>
-│ --- ├── employee.js <br>
+│ --- └── employee.js <br>
 │ --- └── review.js <br>
 
 ├── routes <br>
@@ -34,10 +34,10 @@ habit-tracker <br>
 
 
 ├── views <br>
-│ --- ├── header.ejs <br>
-│ --- ├── add_admin.ejs <br>
-│ --- ├── admin_view.ejs <br>
-│ --- ├── home.ejs <br>
+│ --- └── header.ejs <br>
+│ --- └── add_admin.ejs <br>
+│ --- └── admin_view.ejs <br>
+│ --- └── home.ejs <br>
 │ --- └── review.ejs <br>
 │ --- └── signin.ejs <br>
 │ --- └── signup.ejs <br>
@@ -46,4 +46,4 @@ habit-tracker <br>
 ├── index.js <br>
 ├── package.json <br>
 ├── package-lock.json <br>
-└── README.md <br>
+├── README.md <br>
