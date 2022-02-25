@@ -2,8 +2,7 @@ const express = require('express');                                 //importing 
 const port = process.env.PORT || 8000;                              //specifying the port on which server will run
 const app = express();                                              //launching the server
 const session = require('express-session');                         //importing for session storage of an user
-// const dotenv = require('dotenv');                                   //config env 
-// dotenv.config({ path: 'config/.env' });
+
 const passport = require('passport');                              //importing passport middleware for node.js
 const passportLocal = require('./config/passport');       
 const db = require('./config/mogoose');                            //importing the ODM Mongoose
